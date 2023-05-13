@@ -1,7 +1,7 @@
 import { IsBoolean, IsNotEmpty } from "class-validator";
 
 export class CreateTodo {
-    @IsNotEmpty()
+  @IsNotEmpty()
   readonly title: string;
 
   @IsNotEmpty()
