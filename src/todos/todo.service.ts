@@ -43,4 +43,9 @@ export class TodoService {
       },
     );
   }
+
+  async remove(id: string): Promise<void> {
+    const todo = await this.findOne(id);
+    await todo.destroy()
+  }
 }
