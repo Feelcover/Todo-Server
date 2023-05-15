@@ -1,6 +1,7 @@
 import {
   Body,
   Controller,
+  Delete,
   Get,
   Header,
   HttpCode,
@@ -37,5 +38,10 @@ export class TodoContainer {
   @Patch(':id')
   changeTodo(@Body() changeTodo: ChangeTodo, @Param('id') id: string) {
     return this.todoService.update(id, changeTodo);
+  }
+
+  @Delete(':id')
+  removeTodo(@Param('id') id: string) {
+    return this.todoService.remove(id);
   }
 }
