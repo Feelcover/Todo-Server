@@ -10,9 +10,11 @@ export class TodoService {
     @InjectModel(TodoModel)
     private todoModel: typeof TodoModel,
   ) {}
+  
   async findAll(): Promise<TodoModel[]> {
     return this.todoModel.findAll();
   }
+
   async findOne(id: string): Promise<TodoModel> {
     return this.todoModel.findOne({
       where: {
