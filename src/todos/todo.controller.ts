@@ -15,7 +15,7 @@ import { CreateTodo } from './dto/createTodo.dto';
 import { TodoService } from './todo.service';
 
 @Controller('todos')
-export class TodoContainer {
+export class TodoController {
   constructor(private readonly todoService: TodoService) {}
 
   @Get()
