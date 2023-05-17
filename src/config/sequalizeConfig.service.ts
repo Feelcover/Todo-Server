@@ -6,7 +6,7 @@ import {
 import { TodoModel } from 'src/todos/models/todo.model';
 import { EnumConfig } from './enumConfig/enumConfig';
 
-export class sequelizeConfigService implements SequelizeOptionsFactory {
+export class SequelizeConfigService implements SequelizeOptionsFactory {
   constructor(private readonly configService: ConfigService) {}
 
   createSequelizeOptions(): SequelizeModuleOptions {
